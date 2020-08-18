@@ -18,7 +18,7 @@ BEGIN
 		from MOVEMENTS
 		where account_id = :new.account_id
 		and MOV_TYPE = 'D') 
-	)
+	) THEN
 		EXCEPTION 'Operation not permited';
 	END IF;
 END;
